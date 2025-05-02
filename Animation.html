@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        This is color changing animation
+    </div>
+<style>
+  .box {
+    width: 100px;
+    height: 100px;
+    animation: colorChange 10s;
+  }
+
+  @keyframes colorChange {
+    from { background-color: red; }
+    to { background-color: yellow; }
+  }
+</style>
+<br>
+<div class="multi">
+    This is the move color animation
+</div>
+<style>
+  .multi {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation: moveColor 5s forwards;
+  }
+
+  @keyframes moveColor {
+    0%   { left: 0; background: red; }
+    25%  { left: 50px; background: orange; }
+    50%  { left: 100px; background: yellow; }
+    100% { left: 200px; background: green; }
+  }
+</style>
+<br>
+<br>
+<br>
+<br>
+<div class="pulse">
+    Circle pulse
+</div>
+<style>
+  .pulse {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(135, 194, 157, 0.66);
+    animation: pulseAnim 1s infinite alternate;
+  }
+
+  @keyframes pulseAnim {
+    from { transform: scale(1.9); }
+    to   { transform: scale(0.8); }
+  }
+</style>
+<br>
+<br>
+<br>
+<br>
+<br>
+<button class="hover-btn">Hover example</button>
+<style>
+  .hover-btn:hover {
+    background-color: lightgreen;
+  }
+</style>
+<br>
+<br>
+<br>
+<input type="text" placeholder="Focus animation">
+<style>
+  input:focus {
+    border: 2px solid royalblue;
+    outline: none;
+  }
+</style>
+<br>
+<br>
+<br>
+<ul>
+    <li>First item</li>
+    <li>Second item</li>
+  </ul>
+  
+  <style>
+    li:first-child {
+      color: rgb(157, 56, 148);
+    }
+  </style>
+  <br>
+  <br>
+  <br>
+  <h2>Guten Morgen</h2>
+
+<style>
+  h2::before {
+    content: "✌️ ";
+  }
+</style>
+<br>
+<br>
+<br>
+<p>Learning CSS is fun and powerful.</p>
+
+<style>
+  p::first-letter {
+    font-size: 500%;
+    color: rgb(60, 159, 212);
+  }
+</style>
+<br>
+<br>
+<br>
+<ul>
+    <li>HTML</li>
+    <li>CSS</li>
+  </ul>
+  
+  <style>
+    li::marker {
+      content: "➤ ";
+      color: purple;
+    }
+  </style>
+<br>  
+<br>  
+<br>
+<button class="shine-btn">Shine animation</button>
+
+<style>
+  .shine-btn {
+    position: relative;
+    padding: 12px 30px;
+    background: #3498db;
+    color: white;
+    border: none;
+    overflow: hidden;
+    font-size: 16px;
+  }
+
+  .shine-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: skewX(-20deg);
+  }
+
+  .shine-btn:hover::after {
+    animation: slide-shine 1.67s linear forwards;
+  }
+
+  @keyframes slide-shine {
+    to { left: 125%; }
+  }
+</style>
+<br>
+<br>
+<br>
+
+</body>
+</html>
