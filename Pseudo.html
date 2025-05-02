@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Tracker</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #cd72ec;
+      padding: 30px;
+      color: #333;
+    }
+
+    .task {
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      background-color: #8ad3eb;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .completed::before,
+    .pending::before,
+    .overdue::before {
+      position: absolute;
+      left: 20px;
+      font-size: 28px;
+      top: 20px;
+    }
+
+    .completed::before {
+      content: "✅";
+    }
+
+    .pending::before {
+      content: "🕒";
+    }
+
+    .overdue::before {
+      content: "⏰";
+    }
+
+    .task h3 {
+      margin-left: 50px;
+      margin-top: 0;
+      font-size: 22px;
+    }
+
+    .task p {
+      margin-left: 50px;
+    }
+
+    button {
+      margin-left: 50px;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 10px;
+      background-color: #2d84db;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0d47a1;
+    }
+
+    table {
+      width: 100%;
+      max-width: 600px;
+      margin-top: 40px;
+      border-collapse: collapse;
+      background-color: rgb(238, 216, 110);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    th,
+    td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ccc;
+    }
+
+    th {
+      background-color: #424242;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #e57f7f;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>My Task Tracker</h1>
+
+  <div class="task completed">
+    <h3>Submit Assignment</h3>
+    <p>Completed and submitted via the portal.</p>
+    <button>Mark as Pending</button>
+  </div>
+
+  <div class="task pending">
+    <h3>Read Chapter 4</h3>
+    <p>Need to read before tomorrow’s class.</p>
+    <button>Mark as Done</button>
+  </div>
+
+  <div class="task overdue">
+    <h3>Pay Electricity Bill</h3>
+    <p>Missed deadline. Pay immediately to avoid penalty.</p>
+    <button>Remind Me</button>
+  </div>
+
+  <table>
+    <tr>
+      <th>Task</th>
+      <th>Status</th>
+      <th>Due Date</th>
+    </tr>
+    <tr>
+      <td>Assignment</td>
+      <td>✅ Completed</td>
+      <td>2025-04-25</td>
+    </tr>
+    <tr>
+      <td>Reading</td>
+      <td>🕒 Pending</td>
+      <td>2025-05-03</td>
+    </tr>
+    <tr>
+      <td>Bill Payment</td>
+      <td>⏰ Overdue</td>
+      <td>2025-04-28</td>
+    </tr>
+  </table>
+</body>
+
+</html>
